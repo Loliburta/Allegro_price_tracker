@@ -1,0 +1,156 @@
+body{
+  margin: 0;
+  background: linear-gradient(90deg, rgba(17,15,53,1) 0%, rgba(16,70,89,1) 32%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+
+
+.title{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: calc(2rem + 1.73vw);
+  font-family: 'Lobster', cursive;
+}
+.titleDescription{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border: 0px solid wheat;
+    font-size: calc(1rem + 0.75vw);
+    font-weight: 400;
+    padding-bottom: calc(1.1rem + 5vw);
+}
+
+.customAlert{
+  margin: 0 auto;
+  margin-bottom: calc(1.1rem + 3vw);
+  margin-top: -3vh;
+  color: #333;
+  font-weight: 400;
+  font-size: calc(0.9rem + 0.3vw);
+  text-align: center;
+}
+
+
+.formContent{
+  display: flexbox;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+
+.urlDiv {
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  line-height: calc(0.2rem + 0.45vw)
+}
+.urlName{
+  font-size: calc(1.1rem + 0.45vw);
+}
+
+
+.emailFormDiv {
+  flex-direction: column;
+  text-align: center;
+}
+.emailNameDiv{
+  font-size: calc(0.9em + 0.45vw);
+  padding-top: calc(1.5rem + 4.5vw);
+  line-height: 0px;
+  flex-direction: column;
+  text-align: center;
+
+}
+.emailForm{
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+.PrcLif {
+  text-align: center;
+  flex-direction: column;
+  padding-top: calc(1.5rem + 1.2vw);
+  width: 40%;
+}
+.PrcLifDiv{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: calc(0.6rem + 1vw);
+}
+.PrcLifName{
+  font-size: calc(0.9rem + 0.45vw);
+  line-height: 0.05vw;
+}
+.thinFont{
+  font-weight: 400;
+  font-size: calc(0.9rem + 0.15vw);
+}
+.formMargin{
+  margin-bottom: 8px;
+}
+
+
+.buttondiv{
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.button{
+  justify-content: center;
+  font-size: calc(0.9rem + 0.3vw);
+  font-weight: 700;
+}
+
+
+.footerDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: 400;
+}
+.stepstyle{
+  color: #ef6d43;
+  font-weight: 700;
+}
+.tutorialFontSize{
+  font-size: calc(1rem + 0.16vw);
+}
+.biggerFont{
+  font-size: calc(1.2rem + 0.33vw);
+}
+
+@media (min-width: 0px){
+  .title, .titleDescription, .formContent, .footerDiv{
+    width: 100%;
+  }
+ }
+
+ @media (min-width: 1300px){
+  .title, .titleDescription, .formContent, .footerDiv{
+    width: 80%;
+  }
+ }
+ @media (min-width: 1300px){
+  .customAlert{
+    width: 65%;
+  }
+ }
+ 
+

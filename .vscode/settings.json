@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "/home/loliburta/Desktop/scraper_app/env/bin/python3.6",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}

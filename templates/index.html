@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<header>
+    <h1 class="title">Allegro Price Tracker</h1>
+    <p class="titleDescription">Free tool to track Allegro products and get notified when the price drops</p>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+            <div class="alert alert-success alert-dismissible fade show customAlert" role="alert">
+                <span>Success! {{msg}}</span>
+                <button type="button" class="close" style="color: black;" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</header>
+<body>
+    <form action="" method="POST" class="formContent"> 
+        <div class="urlDiv">
+            <p class="urlName">Paste product URL</p>
+            <input class="form-control form-control-lg urlForm" type="url" name="user_input_URL" placeholder="ex: https://allegro.pl/oferta/konsola-xbox-series-s-digital-512-gb-ssd-9709780831">
+        </div>
+            <div class="emailNameDiv">
+                <p>Email</p>
+            </div>
+            <div class="emailFormDiv">
+                <input class="form-control emailForm" type="email" name="user_input_mail" placeholder="Enter Your Email Address">
+            </div>
+            
+        </div>
+        <div class="PrcLifDiv">
+            <div class="PrcLif">
+                <p class="PrcLifName">Desired Price</p>
+                <input class="form-control formMargin" type="number" name="user_input_price" placeholder="(PLN)" min="0" step="0.01">
+                <p class="thinFont">Enter your desired price for this product</p>
+            </div>
+            <div class="PrcLif">
+                <p class="PrcLifName">Track For</p>
+                <select class="form-control formMargin" name="user_input_life_span">
+                    <option value="7">1 Week</option>
+                    <option value="14">2 Weeks</option>
+                    <option value="30">1 Month</option>
+                  </select>
+                <p class="thinFont">Select how long you want to track this product for</p>
+            </div>
+        </div>
+        <div class="buttondiv">
+            <input class="btn btn-success btn-lg btn-block button" type="submit" value="START TRACKING">
+        </div>
+    </form>
+</body>
+<footer class="footerDiv mt-5">
+    <p class="biggerFont">How to use the Allegro Price Tracker?</p>
+    <div class="tutorialFontSize">
+        <p><span class="stepstyle">Step 1: </span>Paste the Allegro product URL that you desire to track</p>
+        <p><span class="stepstyle">Step 2: </span>Enter your email address</p>
+        <p><span class="stepstyle">Step 3: </span>Enter desired price and how long you need to track the product</p>
+        <p><span class="stepstyle">Step 4: </span>Click on Start Tracking button</p>
+        <p>That’s all. Our system will track the product for you and sends you an email if the price drops below your desired price.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</footer>
+</html>
